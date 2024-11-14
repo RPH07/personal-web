@@ -1,0 +1,13 @@
+/* SlideDownText.css */
+.slide-down-container {
+    color: brown;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin: 0 5px;
+  }
+  
+  .sliding {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  

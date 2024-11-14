@@ -1,0 +1,56 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "photo1 photo1 photo2"
+    "photo1 photo1 photo3"
+    "photo4 photo5 photo5";
+}
+
+.photo-item {
+  position: relative;
+}
+
+.photo-item-1 {
+  grid-area: photo1;
+}
+
+.photo-item-2 {
+  grid-area: photo2;
+}
+
+.photo-item-3 {
+  grid-area: photo3;
+}
+
+.photo-item-4 {
+  grid-area: photo4;
+}
+
+.photo-item-5 {
+  grid-area: photo5;
+}
+
+/* .photo-item-6 {
+  grid-area: photo6;
+}
+
+.photo-item-7 {
+  grid-area: photo7;
+}
+
+.photo-item-8 {
+  grid-area: photo8;
+}
+
+.photo-item-9 {
+  grid-area: photo9;
+} */
+
+/* .photo-item img {
+  
+  object-fit: cover;
+  border-radius: 0.5rem;
+} */

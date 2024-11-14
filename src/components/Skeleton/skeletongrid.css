@@ -1,0 +1,36 @@
+/* src/styles/PhotoGrid.css */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "photo1 photo1 photo2"
+    "photo1 photo1 photo3"
+    "photo4 photo5 photo5";
+}
+
+.item-photo {
+  position: relative;
+  border: 1px solid gray; /* Tambahkan border untuk debugging */
+}
+
+.item-photo-1 {
+  grid-area: photo1;
+}
+
+.item-photo-2 {
+  grid-area: photo2;
+}
+
+.item-photo-3 {
+  grid-area: photo3;
+}
+
+.item-photo-4 {
+  grid-area: photo4;
+}
+
+.item-photo-5 {
+  grid-area: photo5;
+}

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Transisi darkmode */
+@keyframes transition-mode {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .transition-mode {
+    animation: transition-mode 0.5s ease-in-out;
+  }
