@@ -1,8 +1,15 @@
-# React + Vite
+# My Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my personal website. The site was built using React.js with Vite, and it's designed to showcase my portfolio, skills, and projects.
 
-Currently, two official plugins are available:
+## Features
+- Responsive design for both desktop and mobile using Tailwind CSS
+- Custom styling with SCSS for more flexibility
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Technologies Used
+- **React.js** - for building the interactive user interface
+- **Vite** - for faster and leaner development
+- **Tailwind CSS** - for responsive utilities and CSS reset
+- **SCSS** - for custom, scalable styling
+- **JavaScript** - for interactive elements and smooth animations
