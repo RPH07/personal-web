@@ -33,10 +33,28 @@ function HomeRoute({ onLoaded }) {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
+        // cek kecepatan internet user
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        // cek apakah user baru pertama kali load apa tidak
+        const isFirstTime = !localStorage.getItem('firstLoadComplate');
+        // set durasi loading
+        let loadingDuration = 2000;
+        if(connection){
+            switch(connection.effetiveType){
+                case 'slow-2g': loadingDuration = 4000; break;
+                case '2g': loadingDuration = 3000; break;
+                case '3g': loadingDuration = 2500; break
+                case '4g': loadingDuration = 1500; break;
+            }
+        }
         const timer = setTimeout(() => {
             setIsLoaded(true);
             onLoaded();
-        }, 2000);
+            if (isFirstTime){
+                localStorage.setItem('firstLoadComplate', true);
+            }
+            
+        }, loadingDuration);
         
         return () => clearTimeout(timer);
     }, [onLoaded]);
