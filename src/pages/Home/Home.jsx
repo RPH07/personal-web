@@ -46,7 +46,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col items-center py-3 bg-[#F7FBFC] dark:bg-gray-800 dark:text-white">
       {/* Profile Card */}
-      <div className="w-full md:w-[70%] max-w-8xl rounded-lg overflow-hidden shadow-md flex flex-col items-start">
+      <div className="w-full md:max-w-6xl rounded-lg overflow-hidden shadow-md flex flex-col items-start">
         <div className="w-full h-48 bg-cover bg-center flex items-end pl-2 justify-start relative border-b" style={{ backgroundImage: `url('https://scontent.fcgk29-1.fna.fbcdn.net/v/t1.6435-9/114248511_1254465121390823_621707280663699724_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=2a1932&_nc_eui2=AeG5n6ypvS3TnVnlXAEDrhDuDEpSipRwhA4MSlKKlHCEDkbYe-K_b_AIAjrfkdq2LjHAOhSC9oae0rMUkkBvGliE&_nc_ohc=WqnOUU8qjGAQ7kNvgHVdmGW&_nc_ht=scontent.fcgk29-1.fna&oh=00_AYCsQDKYS5mLJfYAcq1QjiyV0krPHfNDlneI0CtFzg2eyg&oe=66C60CF3')` }}>
           <img
             src= {profileImg}
@@ -129,7 +129,7 @@ const Home = () => {
       </div>
 
       {/* Dynamic Section Rendering */}
-      <div className="w-full max-w-4xl mt-6">
+      <div className="w-full max-w-6xl mt-6">
         {renderSection()}
       </div>
     </div>
