@@ -6,24 +6,6 @@ import './skeletongrid.css';
 const PortofolioCard = ({ numPhotographs, numProjects }) => {
     return (
         <div className="animate-pulse">
-            {/* Skeleton Photography */}
-            <div className="bg-white rounded-lg border shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
-                <UserInfoCard />
-                <h1 className="text-center text-2xl font-bold"><div className="h-8 bg-gray-200 rounded w-1/4 mx-auto mt-24"></div></h1>
-                <div className="text-center text-lg pt-4 "><div className="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div></div>
-                <div className="photo-grid mt-4 mb-4">
-                    {Array.from({ length: numPhotographs }).map((_, index) => (
-                        <div key={index} className={`item-photo item-photo-${index + 1}`}>
-                            <div className="w-full h-64 bg-gray-200 rounded border-red-600"></div>
-                        </div>
-                    ))}
-                </div>
-                <div className="flex justify-center mt-4">
-                    <button className="bg-gray-200 text-white rounded p-8 px-28 dark:bg-gray-600">
-                    </button>
-                </div>
-            </div>
-
             {/* Skeleton Frontend Project */}
             <div className="bg-white rounded-lg border shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
                 <UserInfoCard />
@@ -49,6 +31,24 @@ const PortofolioCard = ({ numPhotographs, numProjects }) => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+            
+            {/* Skeleton Photography */}
+            <div className="bg-white rounded-lg border shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
+                <UserInfoCard />
+                <h1 className="text-center text-2xl font-bold"><div className="h-8 bg-gray-200 rounded w-1/4 mx-auto mt-24"></div></h1>
+                <div className="text-center text-lg pt-4 "><div className="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div></div>
+                <div className="photo-grid mt-4 mb-4">
+                    {Array.from({ length: numPhotographs }).map((_, index) => (
+                        <div key={index} className={`item-photo item-photo-${index + 1}`}>
+                            <div className="w-full h-64 bg-gray-200 rounded border-red-600"></div>
+                        </div>
+                    ))}
+                </div>
+                <div className="flex justify-center mt-4">
+                    <button className="bg-gray-200 text-white rounded p-8 px-28 dark:bg-gray-600">
+                    </button>
                 </div>
             </div>
         </div>
