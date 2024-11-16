@@ -10,21 +10,21 @@ const About = () => {
   ];
   const educationData = [
     {
-      institution: "Universitas Bina Sarana Informatika",
-      major: "Teknologi Informasi",
-      dates: "September 2021 - Sekarang",
-    },
-    {
       institution: "Smk Nusantara 1 Kota Tangerang",
       major: "Multimedia",
       dates: "Juli 2017 - April 2020",
     },
+    {
+      institution: "Universitas Bina Sarana Informatika",
+      major: "Teknologi Informasi",
+      dates: "September 2021 - Sekarang",
+    },
   ];
   return (
-    <div className="w-full max-w-full mt-10 ">
-      <div className="w-full flex flex-col md:flex-row gap-5 p-10  md:max-w-15xl mt-8">
+    <div className="mt-10">
+      <div className="w-full flex justify-center flex-col md:flex-row gap-5 p-10 mt-8">
         {/* About Section */}
-        <div className="bg-[#F7FBFC] rounded-lg shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
+        <div className="bg-[#F7FBFC] w-full md:max-w-2xl rounded-lg shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
           <UserInfo />
           <div className="mt-4">
               {aboutMeData.map((paragraph, index) => (
@@ -37,25 +37,59 @@ const About = () => {
 
         </div>
 
-
+        <div className=" flex flex-col gap-5">
         {/* Education Section */}
-        <div className="w-full md:w-[200vh] md:h-[50%] max-w-4xl rounded-lg border shadow-lg p-7 md:p-5 mb-4 dark:bg-gray-700 dark:text-red">
+        <div className="w-full md:h-[50%] rounded-lg border shadow-lg p-7 md:p-5 mb-4 dark:bg-gray-700 dark:text-red">
           <UserInfo />
           <div className="mt-4">
             <h4 className="font-bold text-lg mb-2">Education Road map🏫</h4>
-            <div className="relative border-l-4 border-zenblue dark:border-gray-600 pl-4">
+            <div className="pl-4">
               {educationData.map((edu, index) => (
-                <div key={index} className="mb-5 relative">
+                <div key={index} className="relative">
+                  {/* Titik bulat untuk setiap item */}
                   <div className="absolute -left-7 top-0 w-5 h-5 bg-zenblue rounded-full border-4 border-white dark:border-gray-700"></div>
-                  <div className="ml-4">
+                  <div className="ml-4 mb-5">
                     <h5 className="font-bold">{edu.institution}</h5>
                     <p>{edu.major}</p>
                     <p className="text-gray-500 dark:text-gray-400">{edu.dates}</p>
                   </div>
+                  
+                  {/*Set garis timeline agar hanya tampil 1 */}
+                  {index < educationData.length - 1 && (
+                    <div className="absolute -left-5 top-5 h-full w-1 bg-zenblue dark:bg-gray-600"></div>
+                  )}
                 </div>
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Experience Section */}
+        <div className="w-full md:h-[50%] rounded-lg border shadow-lg p-7 md:p-5 mb-4 dark:bg-gray-700 dark:text-red">
+          <UserInfo />
+          <div className="mt-4">
+            <h4 className="font-bold text-lg mb-2">Experience Road map 💻</h4>
+            <div className="pl-4">
+              {educationData.map((edu, index) => (
+                <div key={index} className="relative">
+                  {/* Titik bulat untuk setiap item */}
+                  <div className="absolute -left-7 top-0 w-5 h-5 bg-zenblue rounded-full border-4 border-white dark:border-gray-700"></div>
+                  <div className="ml-4 mb-5">
+                    <h5 className="font-bold">{edu.institution}</h5>
+                    <p>{edu.major}</p>
+                    <p className="text-gray-500 dark:text-gray-400">{edu.dates}</p>
+                  </div>
+                  
+                  {/*Set garis timeline agar hanya tampil 1 */}
+                  {index < educationData.length - 1 && (
+                    <div className="absolute -left-5 top-5 h-full w-1 bg-zenblue dark:bg-gray-600"></div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
     </div>
