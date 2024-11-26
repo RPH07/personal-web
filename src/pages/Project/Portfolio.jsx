@@ -89,7 +89,6 @@ const Portfolio = () => {
   if (loading) {
     return (
       <div className="p-4">
-
         <PortofolioCard numPhotographs={imageUrls.length} numProjects={projects.length} />
       </div>
     );
@@ -104,11 +103,11 @@ const Portfolio = () => {
           <h2 className="text-xl md:text-2xl font-bold mb-5">
             Front-end Projects
           </h2>
-          <div className="grid sm:grid-cols-2 gap-4 mt-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="m-2 dark:bg-gray-900 rounded-lg bg-white w-full sm:w-72 md:w-80 lg:w-96 overflow-hidden"
+                className="dark:bg-gray-900 rounded-lg bg-zenblue text-white overflow-hidden"
               >
                 <div className="relative">
                   <img
@@ -120,7 +119,7 @@ const Portfolio = () => {
                 </div>
                 <div className="p-4 border-black">
                   <h3 className="text-lg md:text-xl font-bold mb-2">{project.name}</h3>
-                  <p className="text-base md:text-lg text-gray-700 dark:text-white mb-3">
+                  <p className="text-base md:text-lg text-white dark:text-white mb-3">
                     {project.description}
                   </p>
                   <TechIcons tech={project.tech} />
@@ -135,7 +134,7 @@ const Portfolio = () => {
       {/* Section Photography */}
       <div className="bg-white rounded-lg border shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
         <UserInfo />
-        <h1 className="text-center text-2xl font-bold mt-24">Portfolio</h1>
+        <h1 className="text-center text-2xl font-bold mt-10">Portfolio</h1>
         <p className="text-center text-lg">Explore my latest photographs</p>
         <div className="photo-grid mt-4 mb-4">
           {imageUrls.map((imageUrl, index) => (
