@@ -24,7 +24,7 @@ const About = () => {
     <div className="mt-10">
       <div className="w-full flex justify-center flex-col md:flex-row gap-5 p-10 mt-8">
         {/* About Section */}
-        <div className="bg-[#F7FBFC] w-full md:max-w-2xl rounded-lg shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
+        <div className="bg-[#F7FBFC] w-full md:h-1/3 md:max-w-2xl rounded-lg shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
           <UserInfo />
           <div className="mt-4">
               {aboutMeData.map((paragraph, index) => (
@@ -53,7 +53,6 @@ const About = () => {
                     <p>{edu.major}</p>
                     <p className="text-gray-500 dark:text-gray-400">{edu.dates}</p>
                   </div>
-                  
                   {/*Set garis timeline agar hanya tampil 1 */}
                   {index < educationData.length - 1 && (
                     <div className="absolute -left-5 top-5 h-full w-1 bg-zenblue dark:bg-gray-600"></div>
