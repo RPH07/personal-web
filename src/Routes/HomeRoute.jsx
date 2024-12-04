@@ -7,19 +7,19 @@ import Footer from "../components/Footer";
 
 const Home = React.lazy(() => {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(import("../pages/Home/Home")), 2000);
+        setTimeout(() => resolve(import("../pages/Home/Home")), 1000);
     });
 });
 
 const About = React.lazy(() => {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(import("../pages/About/About")), 2000);
+        setTimeout(() => resolve(import("../pages/About/About")), 1000);
     });
 });
 
 const Portfolio = React.lazy(() => {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(import("../pages/Project/Portfolio")), 2000);
+        setTimeout(() => resolve(import("../pages/Project/Portfolio")), 1000);
     });
 });
 
