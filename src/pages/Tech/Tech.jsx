@@ -33,8 +33,7 @@ const myTech = [
 
 const Tech = () => {
     return (
-        <div className="w-full max-w-4xl mt-10 ">
-            <div className="w-full md:max-w-5xl mt-8">
+        <div className="w-full max-w-4xl mt-10 mx-auto">
                 <div className="bg-white rounded-md border shadow-lg p-4 mb-4 dark:bg-gray-700 dark:text-white">
                     <UserInfo />
 
@@ -55,7 +54,6 @@ const Tech = () => {
                         </div>
                     ))}
                 </div>
-            </div>
         </div>
     );
 };
