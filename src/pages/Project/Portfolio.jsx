@@ -103,7 +103,7 @@ const Portfolio = () => {
     // Deklarasi variabel loading
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000); // atur waktu loading
+    }, 20000); // atur waktu loading
 
     return () => clearTimeout(timer);
   }, []);
@@ -131,22 +131,24 @@ const Portfolio = () => {
                 key={index}
                 className="dark:bg-gray-900 rounded-lg bg-zenblue text-white overflow-hidden"
               >
-                <div className="relative">
+                <div className="relative group">
                   <img
                     src={project.imageUrl}
                     alt={project.name}
-                    className="w-full h-48 object-cover cursor-pointer"
-                    onClick={() => window.open(project.url, "_blank")}
+                    className="w-full h-48 object-fill"
                   />
+                  <button className="bg-zenblue rounded-l text-white p-2 cursor-pointer absolute top-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block"
+                    onClick={() => window.open(project.url, "_blank")}>Live preview </button>
                 </div>
                 <div className="p-4 border-black">
                   <h3 className="text-lg md:text-xl font-bold mb-2">{project.name}</h3>
                   <p className="text-base md:text-lg text-white dark:text-white mb-3">
                     {project.description}
                   </p>
-                  <div className="flex md:flex-row justify-between sm:flex-col sm:gap-5">
+                  <div className="flex md:flex-row justify-center sm:flex-col sm:jus sm:gap-5">
                   <TechIcons tech={project.tech} />
-                  <button className="bg-white text-black p-2">Live preview</button>
+                  <button className="bg-white text-black p-2 cursor-pointer block md:hidden"
+                    onClick={() => window.open(project.url, "_blank")}>Live preview</button>
                   </div>
                 </div>
               </div>
