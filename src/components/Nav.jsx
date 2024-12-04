@@ -41,7 +41,7 @@ const Header = () => {
     };
 
     return (
-        <nav className="flex justify-between items-center h-12 px-5 bg-[#98d6ea] text-white shadow-md sm:px-12 dark:bg-gray-900 dark:text-white">
+        <nav className="flex sticky top-0 z-10 justify-between items-center h-12 px-5 bg-[#98d6ea] text-white shadow-md sm:px-12 dark:bg-gray-900 dark:text-white">
             <h3>Reyzen</h3>
             <button onClick={toggleDarkMode}>
                 {isDarkMode ? (
