@@ -60,6 +60,28 @@ const projects = [
       { icon: <UilCss3Simple />, name: "CSS" }
     ],
   },
+  {
+    name: "Project 3",
+    description: "Description of Project 3",
+    imageUrl: "https://reyzen.netlify.app/image/img/full/puncak.jpg",
+    url: "http://reyzen-galeri.netlify.app/",
+    tech: [
+      { icon: <UilJavaScript />, name: "JavaScript" },
+      { icon: <UilReact />, name: "React" },
+      { icon: <UilCss3Simple />, name: "CSS" }
+    ],
+  },
+  {
+    name: "Project 3",
+    description: "Description of Project 3",
+    imageUrl: "https://reyzen.netlify.app/image/img/full/puncak.jpg",
+    url: "http://reyzen-galeri.netlify.app/",
+    tech: [
+      { icon: <UilJavaScript />, name: "JavaScript" },
+      { icon: <UilReact />, name: "React" },
+      { icon: <UilCss3Simple />, name: "CSS" }
+    ],
+  },
 ];
 
 const TechIcons = ({ tech }) => (
@@ -122,7 +144,10 @@ const Portfolio = () => {
                   <p className="text-base md:text-lg text-white dark:text-white mb-3">
                     {project.description}
                   </p>
+                  <div className="flex md:flex-row justify-between sm:flex-col sm:gap-5">
                   <TechIcons tech={project.tech} />
+                  <button className="bg-white text-black p-2">Live preview</button>
+                  </div>
                 </div>
               </div>
             ))}
