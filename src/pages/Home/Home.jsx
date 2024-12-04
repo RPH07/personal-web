@@ -85,7 +85,8 @@ const Home = () => {
           <div className="mb-5 text-gray-400">
             <a href="https://www.linkedin.com/in/reynaldi-putra-hasli/">@reynaldi_putra_hasli</a>
           </div>
-          <div className="text-lg text-gray-700 dark:text-white mt-1">
+          <div className="text-lg text-gray-700 dark:text-white mt-1 flex gap-1">
+            <p>I'm</p>
             <Typewriter
               options={{
                 strings: ["Front-end Web", "UI/UX Designer", "Photographer"],
@@ -160,7 +161,7 @@ const Home = () => {
               <UisMultiply />
             </button>
 
-            <div className="flex justify-between items-center mb-4">
+            <div className="text-center mb-4">
               <h2 className="text-xl font-bold">Kirim Pesan</h2>
             </div>
             <ContactForm />
@@ -269,7 +270,7 @@ function ContactForm() {
         disabled={state.submitting}
       >
         {state.submitting ? (
-          <div className="flex items-center">
+          <div className="flex justify-center">
             <UilSpinner className="animate-spin mr-2" />
             Mengirim...
           </div>
